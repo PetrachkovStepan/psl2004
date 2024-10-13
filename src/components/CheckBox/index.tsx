@@ -1,9 +1,7 @@
+import "./styled.css";
+
 function TextArea() {
-    return (
-      <>
-        <input type="checkbox"/>
-      </>
-    );
-  }
-  
-  export default TextArea;
+  return <input className="checkbox" type="checkbox" />;
+}
+
+export default TextArea;

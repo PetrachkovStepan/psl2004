@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 
+import "./styled.css";
+
 interface FieldProps {
   count: number;
   children: ReactNode;
@@ -11,7 +13,9 @@ function FieldList({ count, children }: FieldProps) {
       {Array(count)
         .fill(0)
         .map(() => (
-          <div key={Math.random()}>{children}</div>
+          <div className="fieldItem" key={Math.random()}>
+            {children}
+          </div>
         ))}
     </>
   );
