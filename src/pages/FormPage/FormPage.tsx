@@ -12,9 +12,9 @@ import "./styled.css";
 function FormPage() {
   const navigate = useNavigate();
   const [isGenerated, setIsGenerated] = useState<boolean>(false);
-  const [inputCount, setInputCount] = useState<number>(1);
-  const [textAreaCount, setTextAreaCount] = useState<number>(1);
-  const [checkBoxCount, setCheckBoxCount] = useState<number>(2);
+  const [inputCount, setInputCount] = useState<number>(0);
+  const [textAreaCount, setTextAreaCount] = useState<number>(0);
+  const [checkBoxCount, setCheckBoxCount] = useState<number>(0);
 
   const generateForm = () => {
     if (inputCount | textAreaCount | checkBoxCount) {
