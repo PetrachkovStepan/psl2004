@@ -1,5 +1,8 @@
 import { Dispatch, HTMLAttributes, SetStateAction } from "react";
-import Input from "../Input";
+
+import Input from "components/Input";
+
+import "./styled.css";
 
 interface FormSettingProps extends HTMLAttributes<HTMLDivElement> {
   text: string;
@@ -8,15 +11,17 @@ interface FormSettingProps extends HTMLAttributes<HTMLDivElement> {
 }
 function FormSetting({ text, count, setInput }: FormSettingProps) {
   return (
-    <>
+    <div className="settingContainer">
       <h3>{text}</h3>
       <Input
         placeholder="count..."
         value={count}
-        type ="number"
-        onChange={(e: { target: { value: SetStateAction<number>; }; }) => setInput(e.target.value)}
+        type="number"
+        onChange={(e: { target: { value: SetStateAction<number> } }) =>
+          setInput(e.target.value)
+        }
       ></Input>
-    </>
+    </div>
   );
 }
 

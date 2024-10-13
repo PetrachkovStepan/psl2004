@@ -1,7 +1,9 @@
-import TextArea from "../TextArea";
-import CheckBox from "../CheckBox";
-import Input from "../Input";
-import FieldList from "../FieldList";
+import Input from "components/Input";
+import TextArea from "components/TextArea";
+import CheckBox from "components/CheckBox";
+import FieldList from "components/FieldList";
+
+import "./styled.css";
 
 interface FormProps {
   inputCount: number;
@@ -13,7 +15,7 @@ function Form({ inputCount, textAreaCount, checkBoxCount }: FormProps) {
   console.log(inputCount, textAreaCount, checkBoxCount);
 
   return (
-    <>
+    <div className="formContainer">
       <FieldList count={inputCount}>
         <div>Input</div>
         <Input></Input>
@@ -26,7 +28,7 @@ function Form({ inputCount, textAreaCount, checkBoxCount }: FormProps) {
         <CheckBox></CheckBox>
         <div>Check Box</div>
       </FieldList>
-    </>
+    </div>
   );
 }
 

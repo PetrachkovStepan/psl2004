@@ -1,4 +1,6 @@
+/* Rainbow button */
 .glow-on-hover {
+  margin: 20px;
   width: 220px;
   height: 50px;
   border: none;
@@ -102,6 +104,7 @@
   }
 }
 
+/* Default button */
 .defaultButton {
   margin: 20px;
   border-radius: 10px;
