@@ -12,8 +12,6 @@ interface FormProps {
 }
 
 function Form({ inputCount, textAreaCount, checkBoxCount }: FormProps) {
-  console.log(inputCount, textAreaCount, checkBoxCount);
-
   return (
     <div className="formContainer">
       <FieldList count={inputCount}>

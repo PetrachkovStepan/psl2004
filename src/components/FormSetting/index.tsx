@@ -17,9 +17,11 @@ function FormSetting({ text, count, setInput }: FormSettingProps) {
         placeholder="count..."
         value={count}
         type="number"
-        onChange={(e: { target: { value: SetStateAction<number> } }) =>
-          setInput(e.target.value)
-        }
+        min="0"
+        max="300"
+        onChange={(e: { target: { value: SetStateAction<number> } }) => {
+          setInput(e.target.value);
+        }}
       ></Input>
     </div>
   );

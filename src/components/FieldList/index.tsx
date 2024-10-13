@@ -8,9 +8,15 @@ interface FieldProps {
 }
 
 function FieldList({ count, children }: FieldProps) {
+  const validate = (count: number) => {
+    if(Number(count) < 0){
+      return 0
+    }
+    return count
+  }
   return (
     <>
-      {Array(count)
+      {Array(validate(count))
         .fill(0)
         .map(() => (
           <div className="fieldItem" key={Math.random()}>
