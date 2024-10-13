@@ -1,6 +1,7 @@
 import TextArea from "../TextArea";
 import CheckBox from "../CheckBox";
 import Input from "../Input";
+import FieldList from "../FieldList";
 
 interface FormProps {
   inputCount: number;
@@ -13,9 +14,18 @@ function Form({ inputCount, textAreaCount, checkBoxCount }: FormProps) {
 
   return (
     <>
-      <Input></Input>
-      <TextArea></TextArea>
-      <CheckBox></CheckBox>
+      <FieldList count={inputCount}>
+        <div>Input</div>
+        <Input></Input>
+      </FieldList>
+      <FieldList count={textAreaCount}>
+        <div>Text Area</div>
+        <TextArea></TextArea>
+      </FieldList>
+      <FieldList count={checkBoxCount}>
+        <CheckBox></CheckBox>
+        <div>Check Box</div>
+      </FieldList>
     </>
   );
 }

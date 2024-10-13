@@ -1,9 +1,5 @@
-function Input() {
-    return (
-      <>
-        <input placeholder="Text..."/>
-      </>
-    );
-  }
-  
-  export default Input;
+function Input({ ...props }) {
+  return <input placeholder="Text..." {...props} />;
+}
+
+export default Input;
