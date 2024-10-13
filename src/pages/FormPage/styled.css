@@ -1,0 +1,18 @@
+.formSettings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 90%;
+  max-width: 900px;
+  background-color: #b5c3db9a;
+  border-radius: 20px;
+  margin: 30px;
+  padding-top: 30px;
+}
+.pageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
